@@ -98,6 +98,7 @@ class Explainer {
 			'id' => 'The SELECT identifier. This is the sequential number of the SELECT within the query. The value can be NULL if the row refers to the union result of other rows. In this case, the table column shows a value like <unionM,N> to indicate that the row refers to the union of the rows with id values of M and N.',
 			'select_type' => 'The type of SELECT',
 			'table' => 'The name of the table to which the row of output refers.',
+			'partitions' => 'The partitions from which records would be matched by the query. The value is NULL for nonpartitioned tables',
 			'type' => 'The join type. For descriptions of the different types, see EXPLAIN Join Types.',
 			'possible_keys' => 'The possible_keys column indicates which indexes MySQL can choose from use to find the rows in this table. Note that this column is totally independent of the order of the tables as displayed in the output from EXPLAIN. That means that some of the keys in possible_keys might not be usable in practice with the generated table order.',
 			'key' => 'The key column indicates the key (index) that MySQL actually decided to use. If MySQL decides to use one of the possible_keys indexes to look up rows, that index is listed as the key value.',
